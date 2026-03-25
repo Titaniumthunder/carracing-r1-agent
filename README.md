@@ -3,9 +3,9 @@
 A reinforcement learning agent trained to drive in OpenAI Gymnasium's CarRacing-v3 environment using PPO (Proximal Policy Optimization).
 
 ## Results
-- Average reward: ~896 / 1000
-- Peak reward: 924
-- Trained for 4M+ timesteps
+- Average reward: ~904 / 1000
+- Peak reward: 933
+- Trained for 10M+ timesteps
 
 ## How it works
 The agent uses a custom CNN to process raw pixel frames from the game and outputs steering, acceleration, and braking actions. It was trained using PPO with frame stacking (4 frames) so the model can infer speed and direction.
@@ -28,3 +28,6 @@ Press Q to quit, R to restart the episode.
 - Algorithm: PPO with frame stacking (n_stack=4)
 - Parallel environments: 64
 - Hardware: Apple M5 Pro (MPS acceleration)
+- Frame stacking (n_stack=4) for speed/direction inference
+- 64 parallel environments for faster training
+- MPS acceleration (Apple Silicon)
